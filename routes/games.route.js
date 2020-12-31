@@ -8,5 +8,8 @@ require('../controllers/games.controller');
 //testando o controller
 router.get('/testar', game_controller.test);
 
+//criando um novo registro no banco de dados
+router.post('/create', games_controller.create);
+
 //exportando o router do controller
 module.exports = router;

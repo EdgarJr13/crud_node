@@ -1,4 +1,6 @@
+//o mongoose é utilizado para conectar a aplicação com o banco de dados.
 const mongoose = require ('mongoose');
+//a modelagem de dados do mongoose é através de "Schemas".
 const Schema = mongoose.Schema;
 
 //criação do modelo do banco de dados
