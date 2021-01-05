@@ -9,15 +9,15 @@ const app = express();
 
 //configurando acesso ao banco de dados
 const mongoose = require('mongoose');
-let url = 'mongodb://dbAdmin:Junior&d13@cruddb.idrrw.mongodb.net/CrudDB?retryWrites=true&w=majority';
-let mongoDB = process.env.MONGODB_URI || url;
-mongoose.connect(mongoDB);
+mongoose.connect('mongodb://localhost:27017');
 mongoose.Promise = global.Promise;
+let db = mongoose.connection;
+db.on('error', console.error.bind(console, 'Erro na ligação ao MongoDB'));
 
 //configurando o Body Parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use('/', smartphones);
+app.use('/', games);
 
 //setando a rota da página
 app.use('/games', games);

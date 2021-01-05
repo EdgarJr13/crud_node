@@ -9,7 +9,7 @@ require('../controllers/games.controller');
 router.get('/testar', game_controller.test);
 
 //criando um novo registro no banco de dados
-router.post('/create', games_controller.create);
+router.post('/create', game_controller.create);
 
 //exportando o router do controller
 module.exports = router;

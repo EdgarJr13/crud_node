@@ -10,7 +10,7 @@ exports.test = function (req, res) {
 exports.create = function (req, res) {
     let game = new Game(
         {
-            nome: req.body.nome,
+            titulo: req.body.titulo,
             dev: req.body.dev,
             anoLancamento: req.body.anoLancamento
         }

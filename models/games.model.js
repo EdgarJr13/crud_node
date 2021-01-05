@@ -8,7 +8,8 @@ let GameSchema = new Schema({
     titulo: {type: String, required: true, max: 100},
     dev: {type: String, required: true, max: 100},
     anoLancamento: {type: Number, required: true},
-});
+}, { collection: 'games' }
+);
 
 //exportar o modelo
 module.exports = mongoose.model('Game', GameSchema);
